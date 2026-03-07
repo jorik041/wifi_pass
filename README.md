@@ -14,6 +14,31 @@ chmod +x con.sh
 
 ./con.sh
 
+## passcheck.sh
+Local password checker that builds a SHA-1 k-Anonymity style database from the wordlist and reports how many times a password appears.
+
+Features:
+- Offline database built from the provided wordlist
+- k-Anonymity buckets (first 5 chars of SHA-1) to avoid full hash lookup files
+- Duplicate counting so you see how common a password is
+- Risk levels based on frequency (LOW, MEDIUM, HIGH, CRITICAL)
+- Single password, file batch, or interactive mode
+
+Setup:
+chmod +x passcheck.sh
+
+Build the database:
+./passcheck.sh build wifi_pass_full.txt
+
+Check a single password:
+./passcheck.sh check "P@ssw0rd123"
+
+Check a file of passwords (one per line):
+./passcheck.sh check -f passwords.txt
+
+Interactive mode:
+./passcheck.sh check
+
 
 ## Warning
 
@@ -41,4 +66,3 @@ GPU: 3090 RTX
 
 ## Licenses
 GPLv3 https://www.gnu.org/licenses/gpl-3.0.en.html
-
