@@ -64,5 +64,7 @@ time: 5 minute
 tool: hashcat 
 GPU: 3090 RTX
 
+Donation are welcome:  https://paypal.me/vcicovic
+
 ## Licenses
 GPLv3 https://www.gnu.org/licenses/gpl-3.0.en.html
